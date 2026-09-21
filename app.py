@@ -14,7 +14,9 @@ from google.genai import types
 # ---------------------------------------------------------
 # GEMINI API KEY CONFIGURATION
 # ---------------------------------------------------------
-GEMINI_API_KEY = "AQ.Ab8RN6LZIPxftYiMLe3jfr4NkUo91tf0a52RqBmy2OyiZKc16g"
+GEMINI_API_KEY = st.secrets.get(
+    "GEMINI_API_KEY", os.environ.get("GEMINI_API_KEY")
+)
 
 # ---------------------------------------------------------
 # PAGE CONFIGURATION
